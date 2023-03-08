@@ -1,5 +1,3 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-
 * {
 	padding: 0;
 	margin: 0;
@@ -118,7 +116,7 @@ input[id="menuicon"]:checked+label span:nth-child(2) {
 
 /*메뉴 창*/
 .sidebar {
-	width: 25%;
+	width: 465px;
 	height: 100%;
 	background: #131316;
 	position: fixed;
