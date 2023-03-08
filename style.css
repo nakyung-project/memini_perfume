@@ -309,7 +309,9 @@ select#product\ option {
 /* 상페 밑에 정보 */
 .bot{
 	width: 860px;
-	margin: 0 auto 170px;
+	margin: 0px auto 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 .bot h1 {
     font-size: 28px;
