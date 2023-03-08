@@ -1,0 +1,385 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	color: #131316;
+	min-width: 1320px;
+	font-size: 14px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 메뉴바 꾸미기 */
+.m_nav {
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all 0.7s;
+	z-index: 100;
+	background-color: white;
+}
+
+.mainlogo {
+	width: 110px;
+	padding-top: 22px;
+	display: block;
+	margin: 10px auto;
+}
+
+/* 자바스크립트로 추가될 클래스 */
+.nav-up {
+	top: -90px;
+	/* 높이만큼 주기 */
+}
+
+/*움직이는 메뉴버튼*/
+
+input[id="menuicon"] {
+	display: none;
+}
+
+/*메뉴 아이콘 버튼 크기, 위치*/
+input[id="menuicon"]+label {
+	display: block;
+	width: 40px;
+	height: 35px;
+	position: fixed;
+	right: 30px;
+	top: 27px;
+	z-index: 2000;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+/*메뉴 버튼 클릭했을 때 X버튼 색상*/
+input[id="menuicon"]:checked+label span {
+	background: white;
+}
+
+/*메뉴 두줄 버튼*/
+input[id="menuicon"]+label span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #131316;
+	transition: all 0.5s;
+	transform-origin: right;
+}
+
+/* 메뉴 두줄 버튼 호버 */
+input[id="menuicon"]+label:hover span:nth-child(1) {
+	transform: scaleX(0.55);
+}
+
+input[id="menuicon"]+label:hover span:nth-child(2) {
+	width: 100%
+}
+
+input[id="menuicon"]+label span:hover span:nth-child(2) {
+	width: 100%;
+}
+
+input[id="menuicon"]+label span:nth-child(1) {
+	top: 5px;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+	bottom: 5px;
+	width: 22px;
+	right: 0;
+}
+
+/*메뉴 버튼 클릭했을 때 세줄버튼에서 X버튼으로 바뀌는 모습*/
+input[id="menuicon"]:checked+label span:nth-child(1) {
+	top: 90%;
+	transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+	bottom: 90%;
+	transform: translateY(50%) rotate(-45deg);
+	width: 100%;
+}
+
+
+/*메뉴 창*/
+.sidebar {
+	width: 25%;
+	height: 100%;
+	background: #131316;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	z-index: 1000;
+	transition: all 0.5s;
+}
+
+input[id="menuicon"]:checked+label+div {
+	right: 0;
+}
+
+
+
+/* 메뉴 제이쿼리 끝 */
+/* 메뉴 시작 */
+.sidebox {
+	width: 380px;
+	margin: 230px auto;
+	height: 500px;
+	color: white;
+}
+
+.sidebox a {
+	color: white;
+	font-size: 66px;
+    font-weight: 400;
+    padding: 15px 0;
+    display: block;
+	position: relative;
+}
+
+.menulogo {
+	width: 150px;
+	padding-bottom: 66px;
+}
+
+.search {
+	width: 280px;
+    background-color: white;
+    height: 30px;
+	position: relative;
+}
+input#keyword{
+	border: none;
+	height: 30px;
+	width: 242px;
+	padding-left: 8px;
+	box-sizing: border-box;
+}
+input[type="image"] {
+    position: absolute;
+    right: 2%;
+	top: 8%;
+}
+.sidebar ul{
+	margin-top: 50px;
+}
+
+.sidebox a::after{
+	content: "";
+	position: absolute;
+	bottom: 3px;
+	left: 0;
+	background-color: white;
+	width: 100%;
+	height: 1.8px;
+	transform: scaleX(0);
+	transition: all 0.3s linear;
+	transform-origin: left;
+}
+.sidebox a:hover::after {
+	transform: scaleX(1);
+
+}
+/* 상품 구매 창 */
+#product {
+	width: 1280px;
+	margin: 90px auto 0;
+	height: 700px;
+	padding-top: 30px;
+}
+
+#product .img {
+	float: left;
+	width: 640px;
+	padding-left: 50px;
+	box-sizing: border-box;
+
+}
+
+#product .right {
+	float: right;
+	width: 640px;
+	padding-left: 40px;
+	box-sizing: border-box;
+	height: 650px;
+}
+
+.right h1 {
+	font-weight: 500;
+	font-size: 27px;
+}
+
+.right h2 {
+	font-size: 24px;
+	margin-top: 25px;
+	font-weight: 500;
+}
+
+.note dt {
+	padding-bottom: 3px;
+}
+
+.note {
+	margin-left: 5px;
+}
+
+.right h3 {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 7px;
+}
+
+.musk {
+	margin-top: 72px;
+}
+
+.wood {
+	margin-top: 35px;
+}
+
+.border p {
+	margin-top: 40px;
+}
+
+.border {
+	border-bottom: 1.5px solid #131316;
+	padding-bottom: 20px;
+}
+
+/* 버튼 */
+.btn {
+	padding-top: 30px;
+}
+
+.btn p {
+	display: inline-block;
+	margin-right: 70px;
+}
+
+select#product\ option {
+	width: 472px;
+	height: 30px;
+	border-radius: 0;
+	box-sizing: border-box;
+	margin-bottom: 26px;
+}
+
+.order li {
+	float: left;
+	border: 1px solid #131316;
+	box-sizing: border-box;
+}
+
+.order li a {
+	color: #131316;
+	display: block;
+	padding: 25px 120px;
+}
+
+.order li:nth-child(1) {
+	margin-right: 12px;
+}
+
+.order li:nth-child(2) a {
+	background-color: #131316;
+	color: white;
+}
+
+/* 상세페이지 */
+.main {
+	width: 860px;
+	margin: 180px auto;
+}
+
+/* 상페 밑에 정보 */
+.bot{
+	width: 860px;
+	margin: 0 auto 170px;
+}
+.bot h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+.bot h2 {
+    font-weight: 500;
+    font-size: 24px;
+	padding: 35px 0 8px;
+	border-bottom: 1px solid #131316bf;
+	margin-bottom: 14px;
+}
+.bot p {
+    font-size: 18px;
+    padding-bottom: 2px;
+
+}
+
+
+
+
+
+/* 푸터 */
+.footer {
+	background-color: #131316;
+	width: 100%;
+	height: 300px;
+}
+
+.footer_in {
+	width: 1290px;
+	margin: 0 auto;
+	color: #ffffff;
+	padding-top: 28px;
+	position: relative;
+	text-align: center;
+}
+.foot_info{
+	padding-bottom: 22px;
+}
+.footer p {
+    padding-bottom: 3px;
+}
+.footer a{
+	color: white;
+}
+.footer ul {
+    display: flex;
+    position: absolute;
+    left: 50%;
+	top: 80%;
+    margin-left: -83.5px;
+}
+.footer ul li {
+    float: left;
+}
+.c {
+    margin-top: 80px;
+}
+
+
+/* 탑 버튼 */
+.top_ {
+	position: fixed;
+	right: 100px;
+	bottom: 100px;
+	z-index: 50;
+}
+
+.top_ img {
+	width: 32px;
+	transform: rotate(-45deg);
+}
